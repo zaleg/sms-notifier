@@ -11,7 +11,6 @@ import static com.codeborne.selenide.Selenide.open;
 public class checker {
     @Test
     public void checkCurrencyTest() {
-        System.getenv("JAVA");
         Configuration.browser = "chrome";
         Configuration.timeout = 10000;
         open("https://finance.i.ua/");
@@ -28,7 +27,6 @@ public class checker {
         Message message = Message.creator(
                 new com.twilio.type.PhoneNumber(RECEIVER),
                 new com.twilio.type.PhoneNumber(TWL_SERVICE),
-
                 "КУРС ДОЛАРА: " + msg)
                 .create();
     }
