@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class checker {
+public class Checker {
     private List<String> receivers = new ArrayList<String>();
     private DateFormat dateFormat = new SimpleDateFormat("dd/MM");
     private String todayDate = dateFormat.format(new Date());
@@ -28,8 +28,8 @@ public class checker {
     public void checkCurrencyTest() {
         Configuration.browser = "chrome";
         Configuration.timeout = 10000;
-        open("https://finance.i.ua/");
-        String strUSDcurrency = $(By.xpath("(//*[@class='widget-currency_bank']//span)[5]")).shouldBe(visible).text();
+        open("https://maanimo.com/currencies/market");
+        String strUSDcurrency = $(".summary-bar-bid > .rate").shouldBe(visible).text();
         receivers.add(RECEIVER_01);
         receivers.add(RECEIVER_02);
         sendSMS(strUSDcurrency);
