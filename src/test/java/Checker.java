@@ -41,7 +41,7 @@ public class Checker {
             Message message = Message.creator(
                     new com.twilio.type.PhoneNumber(receiver),
                     new com.twilio.type.PhoneNumber(TWL_SERVICE),
-                    "КУРС $ В БАНКАХ НА '" + todayDate + "': " + msg)
+                    "[ ВАЛЮТНИЙ КУРС $ НА '" + todayDate + "': " + msg + " ]")
                     .create();
         }
     }
