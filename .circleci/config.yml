@@ -17,7 +17,7 @@ jobs:
       - checkout
       - restore_cache:
           key: ~/sms-notifier-{{ checksum "pom.xml" }}
-      - run: mvn clean -Dtest=checker test
+      - run: mvn clean -Dtest=Checker test
 workflows:
    version: 2
    commit:
