@@ -27,7 +27,7 @@ workflows:
      triggers:
        - schedule:
           # 9am UTC
-          cron: "00 07 * * 1-5"
+          cron: "00 08 * * 1-5"
           filters:
             branches:
               only: master
