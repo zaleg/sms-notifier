@@ -29,7 +29,7 @@ public class Checker {
         Configuration.browser = "chrome";
         Configuration.timeout = 10000;
         open("https://maanimo.com/currencies/market");
-        String strUSDcurrency = $(".summary-bar-bid > .rate").shouldBe(visible).text();
+        String strUSDcurrency = $("tr:nth-child(1) > td:nth-child(5)").shouldBe(visible).text();
         receivers.add(RECEIVER_01);
         receivers.add(RECEIVER_02);
         sendSMS(strUSDcurrency);
